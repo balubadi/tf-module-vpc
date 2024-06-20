@@ -18,3 +18,4 @@ output "app_subnets" {
 output "db_subnets" {
   value = aws_subnet.db.*.id
 }
+#

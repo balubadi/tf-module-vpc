@@ -140,7 +140,7 @@ resource "aws_vpc_peering_connection" "peer" {
   auto_accept   = true
   tags          = merge(var.tags, { Name = "peer-for-${var.env}-vpc-to-default-vpc" })
 }
-
+#
 
 resource "aws_route" "default-vpc-peer-route" {
   route_table_id            = var.default_route_table_id
