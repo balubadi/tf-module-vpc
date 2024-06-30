@@ -141,7 +141,6 @@ resource "aws_vpc_peering_connection" "peer" {
   tags          = merge(var.tags, { Name = "peer-for-${var.env}-vpc-to-default-vpc" })
 }
 
-
 resource "aws_route" "default-vpc-peer-route" {
   route_table_id            = var.default_route_table_id
   destination_cidr_block    = vpc_cidr_block
